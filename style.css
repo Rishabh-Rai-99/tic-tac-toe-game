@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #72DDF7;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+.container{
+    height: 60vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 7px;
+}
+.box{
+    height: 20vmin;
+    width: 20vmin;
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+    align-items: center;
+    color: #FFB703;
+    border: 1px solid black;
+    box-shadow: 2px 2px 0.5px black;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #8093F1;
+}
+
+#reset-btn,#new-btn{
+    margin-top: 50px;
+    padding: 20px;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#new-btn{
+    width: 30vmin;
+    padding: 10px;
+    margin-top: 10px;
+}
+.msg-container{
+    margin-top: 200px;
+    height: 100vmin;
+}
+
+#msg{
+    font-size: 3rem;
+    color: rgb(255, 128, 0);
+}
+
+.hide{
+    display: none;
+}
+
+.animation{
+    animation: click-effect 0.5s 1;
+}
+
+
+@keyframes click-effect {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(0.9); /* Slightly shrink */
+    }
+    40% {
+        transform: scale(1.1); /* Slightly grow */
+    }
+    60% {
+        transform: scale(0.95); /* Return to a bit smaller than the original */
+    }
+    80% {
+        transform: scale(1.05); /* Return to a bit larger than the original */
+    }
+    100% {
+        transform: scale(1); /* Return to the original size */
+    }
+}
+
+
+@media screen and (min-width:320px) {
+    body{
+        margin-top: 70px;
+    }
+    .box{
+        font-size: 2.5rem;
+    }
+
+    #msg{
+        font-size: 2.3rem;
+    }
+    #new-btn{
+        width: 50%;
+        padding: 8px;
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
+    .container{
+        height: 60vmin;
+        width: 60vmin;
+
+    }
+    .box{
+        height: 20vmin;
+        width: 17vmin;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    #reset-btn{
+        font-size: 2rem;
+        padding: 8px;
+    }
+}
